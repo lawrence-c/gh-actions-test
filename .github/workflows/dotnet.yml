@@ -1,0 +1,19 @@
+name: DotNet Test
+
+on: [push]
+
+jobs:
+
+  build:
+
+    runs-on: windows-2019
+
+    steps:
+    - name: checkout master
+      uses: actions/checkout@master
+
+    - name: build
+      run: dotnet build
+
+    - name: run
+      run: dotnet run

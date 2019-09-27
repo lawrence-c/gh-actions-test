@@ -12,6 +12,9 @@ jobs:
     - name: checkout master
       uses: actions/checkout@master
 
+    - name: install dependencies
+      run: choco install sonarscanner-msbuild-netcoreapp2.0
+
     - name: verify dotnet info
       run: dotnet --info
 

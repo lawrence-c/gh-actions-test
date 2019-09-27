@@ -12,6 +12,9 @@ jobs:
     - name: checkout master
       uses: actions/checkout@master
 
+    - name: verify dotnet info
+      uses: dotnet --info
+
     - name: build
       run: dotnet build
 

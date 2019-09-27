@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: verify dotnet info
-      uses: dotnet --info
+      run: dotnet --info
 
     - name: build
       run: dotnet build
